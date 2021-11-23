@@ -1,5 +1,4 @@
-﻿/*A1.5. С некоторого момента прошло 234 дня. Сколько полных недель прошло за этот период?*/
-
+﻿/*A1 .7.Дан прямоугольник с размерами 543 х 130 мм. Сколько квадратов со стороной 130 мм можно отрезать от него?*/
 using System;
 
 namespace TasksApp
@@ -8,10 +7,15 @@ namespace TasksApp
     {
         static void Main(string[] args)
         {
-            double day = 234;
-            double week = 7;
-            int countWeek = Convert.ToInt32(day / week);
-            Console.WriteLine(countWeek);
+            double width = 543;
+            double height = 130;
+
+            double sideSquare = 130;
+           
+            int countSquare = Convert.ToInt32(width / sideSquare) * Convert.ToInt32(height / sideSquare);
+
+
+            Console.WriteLine("Count square = " + countSquare);
 
         }
     }
