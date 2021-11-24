@@ -1,4 +1,7 @@
-﻿/*A1 .7.Дан прямоугольник с размерами 543 х 130 мм. Сколько квадратов со стороной 130 мм можно отрезать от него?*/
+﻿/*A1.6. С начала суток прошло n секунд. Определить:
+а) сколько полных часов прошло с начала суток;
+б) сколько полных минут прошло с начала очередного часа;
+в) сколько полных секунд прошло с начала очередной минуты.*/
 using System;
 
 namespace TasksApp
@@ -7,16 +10,15 @@ namespace TasksApp
     {
         static void Main(string[] args)
         {
-            double width = 543;
-            double height = 130;
-
-            double sideSquare = 130;
-           
-            int countSquare = Convert.ToInt32(width / sideSquare) * Convert.ToInt32(height / sideSquare);
-
-
-            Console.WriteLine("Count square = " + countSquare);
-
+            Console.Write("Please specify time  in seconds = ");
+            double time = double.Parse(Console.ReadLine());
+            Console.WriteLine("Time in seconds = " + time);
+            double timeHours = (time / 3600);
+            Console.WriteLine("Full hours have passed sinse the beginning of the day  = " + timeHours);
+            double timeMinuts = (timeHours * 60);
+            Console.WriteLine("Full minuts have passed sinse the beginning of the hours = " + timeMinuts);
+            double timeSeconds = (timeMinuts * 60);
+            Console.WriteLine("Full seconds have passed the beginning of the minute = " + timeSeconds);
         }
     }
 }
