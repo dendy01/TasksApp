@@ -1,206 +1,40 @@
-﻿/* Вычислить дату следующего дня.
- * Например: введите сегодняшнюю дату (число, месяц, год): 08 06 2012. 
- * Завтра: 09 06 2012;*/
+﻿/*Вычислить оптимальную для пользователя массу. Сравнить ее
+  с реальной массой и вывести в консоль рекомендацию поправиться
+  или похудеть на определенное количество килограммов. Расчет оптимальной массы производится по формуле: рост(см)–100.Например:
+  Ваш рост(см) 175
+  Ваш вес(кг): 95
+  Вам необходимо похудеть на 15 кг*/
 
 using System;
 
-namespace TasksApp
+namespace OptimalMass
 {
     class Program
     {
         static void Main(string[] args)
         {
+            Console.WriteLine("To colculate the optimal weight enter your height");
+            Console.Write("Your height: ");
+            double height = Convert.ToDouble(Console.ReadLine());
+            Console.Write("Your weight: ");
+            double weight = Convert.ToDouble(Console.ReadLine());
+            double optimalWeight = height - 100;
+            Console.WriteLine("Optimal weight: " + optimalWeight);
 
-            int[] DayInMonth = { 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 };
-
-            Console.WriteLine("Enter today's data: ");
-
-            Console.Write("Day: ");
-            int day = Convert.ToInt32(Console.ReadLine());
-            int newDay = day + 1;
-
-            Console.Write("Month: ");
-            int month = Convert.ToInt32(Console.ReadLine());
-            int newMonth = month;
-
-            Console.Write("Year: ");
-            int year = Convert.ToInt32(Console.ReadLine());
-            int newYear = year + 1;
-
-            if (day >= DayInMonth[0] & month == 1)
-             {
-                 if (day > DayInMonth[0])
-                 {
-                     Console.WriteLine("Incorrect date");
-                 }
-                 else
-                 {
-                     newDay = 1;
-                     newMonth = month + 1;
-                     Console.WriteLine("New date: " + newDay + "." + newMonth + "." + year);
-                 }
-             }
-             else if (day >= DayInMonth[1] & year % 4 != 0 & month == 2)
-             {
-                 if (day > DayInMonth[1])
-                 {
-                     Console.WriteLine("Incorrect date");
-                 }
-                 else
-                 {
-                     newDay = 1;
-                     newMonth = month + 1;
-                     Console.WriteLine("New date: " + newDay + "." + newMonth + "." + year);
-                 }   
-             }
-             else if (day >= DayInMonth[2] & month == 3)
-             {
-                 if (day > DayInMonth[2])
-                 {
-                     Console.WriteLine("Incorrect date");
-                 }
-                 else
-                 {
-                     newDay = 1;
-                     newMonth = month + 1;
-                     Console.WriteLine("New date: " + newDay + "." + newMonth + "." + year);
-                 }
-             }
-             else if (day >= DayInMonth[3] & month == 4)
-             {
-                 if (day > DayInMonth[3])
-                 {
-                     Console.WriteLine("Incorrect date");
-                 }
-                 else
-                 {
-                     newDay = 1;
-                     newMonth = month + 1;
-                     Console.WriteLine("New date: " + newDay + "." + newMonth + "." + year);
-                 }
-             }
-             else if (day >= DayInMonth[4] & month == 5)
-             {
-                 if (day > DayInMonth[4])
-                 {
-                     Console.WriteLine("Incorrect date");
-                 }
-                 else
-                 {
-                     newDay = 1;
-                     newMonth = month + 1;
-                     Console.WriteLine("New date: " + newDay + "." + newMonth + "." + year);
-                 }
-             }
-             else if (day >= DayInMonth[5] & month == 6)
-             {
-                 if (day > DayInMonth[5])
-                 {
-                     Console.WriteLine("Incorrect date");
-                 }
-                 else
-                 {
-                     newDay = 1;
-                     newMonth = month + 1;
-                     Console.WriteLine("New date: " + newDay + "." + newMonth + "." + year);
-                 }
-             }
-             else if (day >= DayInMonth[6] & month == 7)
-             {
-                 if (day > DayInMonth[6])
-                 {
-                     Console.WriteLine("Incorrect date");
-                 }
-                 else
-                 {
-                     newDay = 1;
-                     newMonth = month + 1;
-                     Console.WriteLine("New date: " + newDay + "." + newMonth + "." + year);
-                 }
-             }
-             else if (day >= DayInMonth[7] & month == 8)
-             {
-                 if (day > DayInMonth[7])
-                 {
-                     Console.WriteLine("Incorrect date");
-                 }
-                 else
-                 {
-                     newDay = 1;
-                     newMonth = month + 1;
-                     Console.WriteLine("New date: " + newDay + "." + newMonth + "." + year);
-                 }
-             }
-             else if (day >= DayInMonth[8] & month == 9)
-             {
-                 if (day > DayInMonth[8])
-                 {
-                     Console.WriteLine("Incorrect date");
-                 }
-                 else
-                 {
-                     newDay = 1;
-                     newMonth = month + 1;
-                     Console.WriteLine("New date: " + newDay + "." + newMonth + "." + year);
-                 }
-             }
-             else if (day >= DayInMonth[9] & month == 10)
-             {
-                 if (day > DayInMonth[9])
-                 {
-                     Console.WriteLine("Incorrect date");
-                 }
-                 else
-                 {
-                     newDay = 1;
-                     newMonth = month + 1;
-                     Console.WriteLine("New date: " + newDay + "." + newMonth + "." + year);
-                 }
-             }
-             else if (day >= DayInMonth[10] & month == 11)
-             {
-                 if (day > DayInMonth[10])
-                 {
-                     Console.WriteLine("Incorrect date");
-                 }
-                 else
-                 {
-                     newDay = 1;
-                     newMonth = month + 1;
-                     Console.WriteLine("New date: " + newDay + "." + newMonth + "." + year);
-                 }
-             }
-             else if (day >= DayInMonth[11] & month == 12)
-             {
-                 if (day > DayInMonth[11])
-                 {
-                     Console.WriteLine("Incorrect date");
-                 }
-                 else
-                 {
-                    newDay = 1;
-                    newMonth = 1;
-                    newYear = year + 1;
-                    Console.WriteLine("New date: " + newDay + "." + newMonth + "." + newYear);
-                 }
-             }
-             else if(day >= 29 & year % 4 == 0 & month == 2)
-             {
-                 if (day > 29)
-                 {
-                     Console.WriteLine("Incorrect date");
-                 }
-                 else
-                 {
-                     newDay = 1;
-                     newMonth = month + 1;
-                     Console.WriteLine("New date: " + newDay + "." + newMonth + "." + year);
-                 }        
-             } 
-             else
-             {
-                 Console.WriteLine("New date: " + newDay + "." + newMonth + "." + year);
-             }
+            if (optimalWeight == weight)
+            {
+                Console.WriteLine("For this height, your weight is optimal");
+            }
+            else if (weight > optimalWeight)
+            {
+                double heavyWeight = weight - optimalWeight;
+                Console.WriteLine("You are recommended to lose weight by: " + heavyWeight + " kg");
+            }
+            else if (weight < optimalWeight)
+            {
+                double smallWeight = optimalWeight - weight;
+                Console.WriteLine("It is recommended to gain weight on: " + smallWeight + " kg");
+            }
         }
     }
 }
