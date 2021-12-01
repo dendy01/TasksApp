@@ -178,9 +178,10 @@ namespace TasksApp
                  }
                  else
                  {
-                     newDay = 1;
-                     newMonth = month + 1;
-                     Console.WriteLine("New date: " + newDay + "." + newMonth + "." + year);
+                    newDay = 1;
+                    newMonth = 1;
+                    newYear = year + 1;
+                    Console.WriteLine("New date: " + newDay + "." + newMonth + "." + newYear);
                  }
              }
              else if(day >= 29 & year % 4 == 0 & month == 2)
@@ -203,3 +204,5 @@ namespace TasksApp
         }
     }
 }
+
+
